@@ -8,8 +8,8 @@ function addTwo(num1, num2){
     return num1 + num2
 }
 //refactor below
-
-
+const addTwoB = (num1, num2) => num1 + num2;
+console.log(addTwoB(3, 5));
 
 
 
@@ -20,12 +20,8 @@ function templateLiteral(firstName, lastName) {
     return `Hello, ${firstName} ${lastName}! Welcome to the most beautiful site in the world. We hope you learn everything you ever wanted to know and that your life from this day forward will be filled with joy, wonder and adventure. Thank you for stopping by!`
 }
 //refactor below
-
-
-
-
-
-
+const templateLiteral2 = (firstName, lastName) => `Hello, ${firstName} ${lastName}! Welcome to the most beautiful site in the world. We hope you learn everything you ever wanted to know and that your life from this day forward will be filled with joy, wonder and adventure. Thank you for stopping by!`;
+console.log(templateLiteral2('Staysha', 'Hackmann'));
 
 
 
@@ -50,7 +46,22 @@ const numbers2 = [1, 2, 3, 4, 2, 6];
 
 //refactor below
 
+const hasDuplicates = (arr) => {
+    const numMap = {};
+    for (const num of arr) {
+        if (numMap[num]) {
+            return true;
+        }
+        numMap[num] = true;
+    }
+    return false;
+}
 
+// Example usage
+const numbers3 = [1, 2, 3, 4, 5, 6];
+const numbers4 = [1, 2, 3, 4, 2, 6];
+console.log(hasDuplicates(numbers3));
+console.log(hasDuplicates(numbers4));
 
 
 
@@ -65,3 +76,4 @@ function validateUserCredentials(users, inputUsername, inputPassword) {
     return users.some(user => user.username === inputUsername && user.password === inputPassword);
 }
 
+const validateUserCredentials2 = (users, inputUsername, inputPassword) => users.some(user => user.username === inputUsername && user.password === inputPassword);
